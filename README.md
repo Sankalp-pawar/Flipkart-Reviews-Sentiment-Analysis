@@ -1,38 +1,40 @@
 Sentiment Analysis of Flipkart Reviews
 📌 Overview
-This project aims to analyze customer reviews from Flipkart and classify them into positive and negative sentiments using machine learning techniques. We preprocess the text, visualize key insights, and train a Decision Tree Classifier for sentiment prediction.
+This project focuses on analyzing customer reviews from Flipkart and classifying them as positive or negative using machine learning techniques. It involves data preprocessing, visualization, and model training using a Decision Tree Classifier.
 
 🛠️ Libraries Used
-Pandas – Handling and processing datasets
-Scikit-learn – Machine learning models, vectorization, and evaluation
+Pandas – Data manipulation and handling
+Scikit-learn – Machine learning models, accuracy evaluation, and TF-IDF vectorization
 Matplotlib & Seaborn – Data visualization
-WordCloud – Generating word clouds for analysis
-NLTK – Text preprocessing (stopwords, tokenization)
+WordCloud – Generating word clouds to highlight important words
+NLTK – Natural language processing (stopwords, tokenization)
 📂 Dataset
-The dataset consists of Flipkart product reviews, including customer ratings. We convert these ratings into binary sentiment labels:
+The dataset consists of Flipkart customer reviews along with ratings. To make sentiment classification easier, ratings are categorized as follows:
+✅ Positive (1) – Rating of 5
+❌ Negative (0) – Ratings of 4 or below
 
-Positive (1) – Ratings of 5
-Negative (0) – Ratings of 4 or below
-🔍 Data Preprocessing
-To prepare the text for analysis, we:
+🔍 Data Preprocessing Steps
+To clean and prepare the text data:
+✔ Convert text to lowercase
+✔ Remove punctuation and special characters
+✔ Tokenize words using NLTK
+✔ Remove stopwords (e.g., "the", "is", "and")
+✔ Convert text into numerical features using TF-IDF Vectorization
 
-Convert text to lowercase
-Remove punctuation
-Tokenize words using NLTK
-Remove stopwords
-Apply TF-IDF vectorization
-📊 Exploratory Data Analysis
-Distribution of Ratings: A count plot shows how many reviews belong to each rating category.
-WordCloud: Frequently used words in positive and negative reviews are visualized.
+📊 Exploratory Data Analysis (EDA)
+We use visualizations to understand data distribution:
+📌 Count Plot: Displays the distribution of ratings in the dataset
+📌 WordCloud: Highlights the most frequent words in positive and negative reviews
+
 🏗️ Model Training & Evaluation
-We use Decision Tree Classifier to classify reviews into sentiments.
+We use Decision Tree Classifier to predict sentiments.
+📌 Train-Test Split: 67% training, 33% testing
+📌 Accuracy Score: 92.47% on training data
+📌 Confusion Matrix: Helps in evaluating true positives and false negatives
 
-Train-Test Split: 67% training, 33% testing
-Accuracy Score: Achieved 92.47% on training data
-Confusion Matrix: Evaluates model performance
-📈 Results & Future Scope
-The model performs well with high accuracy, but it can be improved by:
-
-Trying Random Forest, Naïve Bayes, or SVM for better performance
-Collecting larger datasets for better generalization
-Fine-tuning TF-IDF parameters
+📈 Results & Future Improvements
+🔹 The Decision Tree Classifier performs well, achieving high accuracy
+🔹 Further improvements can be made by:
+✔ Experimenting with Random Forest, Naïve Bayes, or SVM
+✔ Collecting a larger dataset for better model generalization
+✔ Fine-tuning TF-IDF parameters to capture important words better
